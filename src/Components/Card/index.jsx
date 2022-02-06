@@ -9,7 +9,7 @@ const Card = ({description,type,maskedValue,removeItem}) =>{
             </div>
             <div className="container--row">
                 <span className="price">R$ {maskedValue}</span>
-                <button className="btn--remove" onClick={removeItem}>{"use react icons"}</button>
+                <button className="btn--remove" onClick={removeItem}></button>
             </div>
         </div>
     )

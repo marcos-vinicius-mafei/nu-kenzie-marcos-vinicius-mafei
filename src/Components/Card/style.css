@@ -3,10 +3,12 @@
     width: 560px;
     height:87px;
     background-color: #f8f9fa;
-    border-radius:10px;
+    border-radius:5px;
     display: flex;
     flex-direction: row;
     gap: 41px;
+    padding-right: 13px;
+    padding-left: 18px;
 }
 
 .container--column{
@@ -14,5 +16,39 @@
     height:68px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    padding-top: 8px;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.tipo{
+   font-size: 12px;
+   color: #868E96;
+}
+
+.container--row{
+    width: 151px;
+    padding-top:20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.btn--remove{
+    width: 22px;
+    height: 22px;
+    background-image: url('../../images/trash.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border: transparent;
+    border-radius: 3px;
+}
+
+.Entrada{
+    border-left: 4px solid #03b898;
+}
+
+.Despesa{
+    border-left: 4px solid #E9ECEF;
 }

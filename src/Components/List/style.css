@@ -44,3 +44,9 @@ ul.filters {
 .noCard--message {
     color: var(--grey3);
 }
+
+.cards--list{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
