@@ -1,0 +1,107 @@
+:root {
+    --grey0: #F8F9FA;
+    --grey3: #868E96;
+    --grey4: #212529;
+    --colorPrimary: #FD377E;
+}
+
+.container--form input {
+    color: var(--grey3);
+    outline: none;
+    padding-left: 16px;
+    font-size: 16px;
+    border: 1px transparent;
+    background-color: var(--grey0);
+    border-radius: 10px;
+}
+
+label {
+    color: var(--grey4);
+}
+
+div.container--form {
+    height: 363px;
+    width: 351px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.container--inputDesc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.form--description {
+    width: 314px;
+    height: 50px;
+}
+
+.container--inputDesc span {
+    color: var(--grey3);
+}
+
+.line--container {
+    display: flex;
+    flex-direction: row;
+    width: 314px;
+    justify-content: space-between;
+}
+
+.labels--container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0; 
+}
+
+.form--money {
+    width: 128px;
+    height: 48px;
+    background-image: url('../../images/R$.svg');
+    background-repeat: no-repeat;
+    background-position-x:91px;
+    background-position-y:center;
+}
+
+.form--type{
+    width: 150px;
+    height: 48px;
+    color: var(--grey3);
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('../../images/ANGLE-DOWN.svg');
+    background-repeat: no-repeat;
+    background-position-x: 124px;
+    background-position-y:center;
+    font-size: 12px;
+    padding-left: 16px;
+    border: 1px transparent;
+    background-color: var(--grey0);
+    border-radius: 10px;
+}
+
+.form--button{
+    height:48px;
+    width: 314px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--colorPrimary);
+    border-radius: 10px;
+    border: 1px transparent;
+}

@@ -1,19 +1,26 @@
-
+import './style.css'
 
 const Form = ({changeValue,changeDescription,changeType,addItem}) => {
     return(
         <div className="container--form">
             <form onSubmit={addItem}>
-                <label htmlFor="description">Descrição</label>
-                <input type="text" name="description" className="form--description" placeholder="Digite aqui sua descrição" onChange={changeDescription}/>
-                <span>Ex: Compra de roupas</span>
+                <div className="container--inputDesc">
+                    <label htmlFor="description">Descrição</label>
+                    <input type="text" name="description" className="form--description" placeholder="Digite aqui sua descrição" onChange={changeDescription}/>
+                    <span>Ex: Compra de roupas</span>
+                </div>
                 <div className="line--container">
-                    <label htmlFor="money">Valor</label>
-                    <input type="number" name="money" className="form--money" placeholder="1" onChange={changeValue}/>
-                    <select name="type" className="form--type" placeholder="Entrada" onChange={changeType}>
-                        <option value="entrada">Entrada</option>
-                        <option value="saida">Saída</option>
-                    </select>
+                    <div className="labels--container">
+                        <label htmlFor="money">Valor</label>
+                        <input type="number" name="money" className="form--money" placeholder="1" onChange={changeValue}/>
+                    </div>
+                    <div className="labels--container">
+                        <label htmlFor="type">Tipo de valor</label>
+                        <select name="type" className="form--type" placeholder="Entrada" onChange={changeType}>
+                            <option value="Entrada">Entrada</option>
+                            <option value="Despesa">Despesa</option>
+                        </select>
+                    </div>
                 </div>
                 <button type="submit" className="form--button">Inserir Valor</button>
             </form>

@@ -5,10 +5,7 @@ import LandingPage from './Components/LandingPage';
 
 function App() {
 
-  const [listTransactions, setListTransactions] = useState([
-    { description: "Salário recebido", type: "entrada", value: 2500 },
-    { description: "Conta de luz", type: "saída", value: -150 }
-  ])
+  const [listTransactions, setListTransactions] = useState([])
 
 
   const [landingPage,setLandingPage] = useState(true)

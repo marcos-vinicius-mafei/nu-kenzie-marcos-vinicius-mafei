@@ -1,4 +1,5 @@
 import NuKenzie from '../../images/NuKenzie.png'
+import './style.css'
 
 const Header = ({showHideLanding}) => {
     return(

@@ -1,0 +1,46 @@
+.list--container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 560px;
+}
+
+ul.filters {
+    width: 560px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 16px;
+    align-items: center;
+}
+
+.abstract {
+    margin-right: 125px;
+}
+
+.btn--filters {
+    width: 90px;
+    height: 40px;
+    color: var(--grey3);
+    font-size: 14px;
+    border: 1px transparent;
+    background-color: var(--grey0);
+    border-radius: 10px;
+}
+
+.btn--todos {
+    width: 69px;
+    color: #fff;
+    background-color: var(--colorPrimary)
+}
+
+.noCard {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.noCard--message {
+    color: var(--grey3);
+}

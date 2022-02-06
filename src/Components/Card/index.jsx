@@ -1,16 +1,15 @@
+import './style.css'
 
-
-const Card = ({description,value,type}) =>{
-    // const classes = "card recebe por props"
+const Card = ({description,type,maskedValue,removeItem}) =>{
     return(
-        <div className={"card"}>
+        <div className={`card ${type}`}>
             <div className="container--column">
-                <h2 className="title">{description}</h2>
+                <h3 className="title">{description}</h3>
                 <span className="tipo">{type}</span>
             </div>
             <div className="container--row">
-                <span className="price">R$ {value}</span>
-                <button className="btn--remove" onClick={"remove"}>{"use react icons"}</button>
+                <span className="price">R$ {maskedValue}</span>
+                <button className="btn--remove" onClick={removeItem}>{"use react icons"}</button>
             </div>
         </div>
     )

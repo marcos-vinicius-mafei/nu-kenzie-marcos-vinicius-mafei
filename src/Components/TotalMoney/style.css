@@ -1,0 +1,15 @@
+
+.total--money{
+    width: 363px;
+    height:68px;
+    background-color: #E34981;
+    border-radius:10px;
+    border: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 20px;
+    color: #fff;
+}
