@@ -1,0 +1,29 @@
+.alert--card{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 10px;
+    width: 400px;
+    height:60px;
+    background-color: var(--colorPrimary);
+    position: absolute;
+    top: 50px;
+    left: 40%;
+    border-radius: 10px;
+}
+
+.alert--message{
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn--alert{
+    background: transparent;
+    border: transparent;
+    width: fit-content;
+}
+
+.btn--alert:hover{
+    cursor: pointer;
+}

@@ -8,8 +8,8 @@ const List = ({removeItem,currentList,noFilter,filterEntries,filterOuts}) => {
         <div className="list--container">
             <nav>
                 <ul className="filters">
-                    <li className="abstract"><h3>Resumo Financeiro</h3></li>
-                    <li><button onClick={noFilter} className="btn--todos btn--filters">Todos</button></li>
+                    <li className="abstract"><h3>Resumo financeiro</h3></li>
+                    <li><button onClick={noFilter} className="btn--todos btn--filters active--btn">Todos</button></li>
                     <li><button onClick={filterEntries} className="btn--entradas btn--filters">Entradas</button></li>
                     <li><button onClick={filterOuts} className="btn--despesas btn--filters">Despesas</button></li>
                 </ul>

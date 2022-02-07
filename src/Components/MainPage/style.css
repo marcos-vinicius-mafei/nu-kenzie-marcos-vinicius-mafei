@@ -1,0 +1,13 @@
+.main--home {
+    margin-top: 40px;
+    width: 983px;
+    margin-inline: auto;
+    display: flex;
+    gap: 60px;
+}
+
+.form--total{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}

@@ -1,10 +1,54 @@
-.landing--page{
+.landing--page {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:#212529;
-    height:100%;
+    background-color: #212529;
+    height: 100%;
 }
 
-.main--landing
+.main--landing {
+    width: 988px;
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+}
 
+.container--landing {
+    width: 347px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.description--landing{
+    text-align: left;
+    line-height: 48px;
+}
+
+.description--landing, .finished--description {
+    color: #fff;
+}
+
+.btn--landing{
+    width: 241px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    height:48px;
+    color: #fff;
+    background-color: var(--colorPrimary);
+   -webkit-transition: all 0.5s 0s ease-in-out;
+    -moz-transition: all 0.5s 0s ease-in-out;
+    -o-transition: all 0.5s 0s ease-in-out;
+    transition: all 0.5s 0s ease-in-out;
+}
+
+.btn--landing:hover{
+    cursor: pointer;
+    background-color: #eb1d68;
+    border: 2px solid #fff;
+   -webkit-transition: all 0.5s 0s ease-in-out;
+    -moz-transition: all 0.5s 0s ease-in-out;
+    -o-transition: all 0.5s 0s ease-in-out;
+    transition: all 0.5s 0s ease-in-out;
+}

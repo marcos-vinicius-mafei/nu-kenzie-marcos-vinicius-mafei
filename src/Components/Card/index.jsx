@@ -8,7 +8,7 @@ const Card = ({description,type,maskedValue,removeItem}) =>{
                 <span className="tipo">{type}</span>
             </div>
             <div className="container--row">
-                <span className="price">R$ {maskedValue}</span>
+                <span className="price">R$ {maskedValue.toFixed(2).replace('.',',')}</span>
                 <button className="btn--remove" onClick={removeItem}></button>
             </div>
         </div>

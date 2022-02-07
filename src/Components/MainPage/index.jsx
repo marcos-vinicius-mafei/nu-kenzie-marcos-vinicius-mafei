@@ -3,7 +3,8 @@ import Form from "../Form"
 import List from "../List"
 import TotalMoney from "../TotalMoney"
 import {useState} from 'react'
-
+import AlertCard from "../AlertCard"
+import './style.css'
 
 const MainPage = ({showHideLanding,listTransactions,setListTransactions}) =>{
 
@@ -14,6 +15,18 @@ const MainPage = ({showHideLanding,listTransactions,setListTransactions}) =>{
     const [type,setType] = useState('Entrada')
 
     const [maskedValue,setMaskedValue] = useState(0)
+
+    const [alert,setAlert] = useState(false)
+
+    const [message,setMessage] = useState('')
+
+    const showAlert = () =>{
+        setAlert(true)
+    }
+
+    const hideAlert = () =>{
+        setAlert(false)
+    }
 
     const changeValue = (e) =>{
         setValue(Number(e.target.value))
@@ -33,8 +46,6 @@ const MainPage = ({showHideLanding,listTransactions,setListTransactions}) =>{
         setType(e.target.value)
         if(e.target.value === 'Despesa'){
             setValue(-Math.abs(value))
-            console.log('hi')
-            console.log(value)
         }else{
             setValue(Math.abs(value))
         }
@@ -51,13 +62,22 @@ const MainPage = ({showHideLanding,listTransactions,setListTransactions}) =>{
         if(description !== '' && ( value !== 0 || maskedValue !== 0)){
             if(listTransactions.find(item => item.description === newItem.description && item.type === newItem.type) === undefined){
                 setListTransactions([...listTransactions,newItem])
-                console.log('hello')
                 setCurrentList([...listTransactions,newItem])
+                const buttons = document.querySelectorAll('.btn--filters')
+                buttons.forEach(button =>{
+                    button.classList.remove('active--btn')
+                } )
+                const allFilter = document.querySelector('.btn--todos')
+                allFilter.classList.add('active--btn')
             }else{
-                window.alert("Você já possui uma transação com essa descrição")
+                setMessage("Você já possui uma transação com essa descrição")
+                showAlert()
+                setTimeout(() => {hideAlert()},6000)
             }
          }else{
-             window.alert("É necessário inserir uma descrição e um valor para adicionar uma transação")
+            setMessage("É necessário inserir uma descrição e um valor para adicionar uma transação")
+            showAlert()
+            setTimeout(() => {hideAlert()},6000)
          }
     }
 
@@ -68,37 +88,61 @@ const MainPage = ({showHideLanding,listTransactions,setListTransactions}) =>{
         const filterParam = cardName.innerText
         const cardType = card.children[0].children[1]
         const filterParam2 = cardType.innerText
-        console.log(filterParam2)
         const filtered = listTransactions.filter(item => item.description !== filterParam || item.type !== filterParam2)
         setListTransactions(filtered)
         setCurrentList(filtered)
+        const buttons = document.querySelectorAll('.btn--filters')
+        buttons.forEach(button =>{
+            button.classList.remove('active--btn')
+        } )
+        const allFilter = document.querySelector('.btn--todos')
+        allFilter.classList.add('active--btn')
     }
 
     const [currentList,setCurrentList] = useState(listTransactions)
 
-    const noFilter = () =>{
+    const noFilter = (e) =>{
+        const buttons = document.querySelectorAll('.btn--filters')
+        buttons.forEach(button =>{
+            if(button !== e.target){
+                button.classList.remove('active--btn')
+            }
+        } )
+        e.target.classList.add('active--btn')
         setCurrentList(listTransactions)
     }
 
-    const filterEntries = () =>{
+    const filterEntries = (e) =>{
+        const buttons = document.querySelectorAll('.btn--filters')
+        buttons.forEach(button =>{
+            if(button !== e.target){
+                button.classList.remove('active--btn')
+            }
+        } )
+        e.target.classList.add('active--btn')
         const filtered = listTransactions.filter(item => item.type === 'Entrada')
         setCurrentList(filtered)
     }
 
-    const filterOuts = () =>{
+    const filterOuts = (e) =>{
+        const buttons = document.querySelectorAll('.btn--filters')
+        buttons.forEach(button =>{
+            if(button !== e.target){
+                button.classList.remove('active--btn')
+            }
+        } )
+        e.target.classList.add('active--btn')
         const filtered = listTransactions.filter(item => item.type === 'Despesa')
         setCurrentList(filtered)
     }
 
-    console.log(type)
-
     return(
-        <>
+        <>  {alert && <AlertCard message={message} hideAlert ={hideAlert}/>}
             <Header showHideLanding={showHideLanding}/>
-            <main>
+            <main className="main--home">
                 <div className="form--total">
                     <Form changeValue={changeValue} changeDescription={changeDescription} changeType={changeType} addItem={addItem}/>
-                    <TotalMoney listTransactions={listTransactions}/>
+                    {listTransactions.length > 0 && <TotalMoney listTransactions={listTransactions}/>}
                 </div>
                 <List listTransactions={listTransactions} removeItem={removeItem} noFilter={noFilter} filterEntries={filterEntries} filterOuts={filterOuts} currentList={currentList}/>
             </main>

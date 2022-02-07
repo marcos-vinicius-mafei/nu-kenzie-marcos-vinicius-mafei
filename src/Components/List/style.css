@@ -15,24 +15,35 @@ ul.filters {
 }
 
 .abstract {
-    margin-right: 125px;
+    margin-right: 110px;
 }
 
 .btn--filters {
     width: 90px;
     height: 40px;
-    color: var(--grey3);
+    color: #868E96;
     font-size: 14px;
+    font-weight: 600;
     border: 1px transparent;
-    background-color: var(--grey0);
+    background-color: #E9ECEF;
     border-radius: 10px;
+}
+
+.btn--filters:hover{
+    cursor: pointer;
+    background-color: #E34981;
+    color: #fff;
 }
 
 .btn--todos {
     width: 69px;
-    color: #fff;
-    background-color: var(--colorPrimary)
 }
+
+.active--btn{
+    color: #fff;
+    background-color: var(--colorPrimary) !important;
+}
+
 
 .noCard {
     display: flex;
