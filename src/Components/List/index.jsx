@@ -16,7 +16,7 @@ const List = ({removeItem,currentList,noFilter,filterEntries,filterOuts}) => {
             </nav>
             <ul className="cards--list">
                 {currentList.length > 0?
-                currentList.map(transaction => <li key={`${transaction.description} ${transaction.type}`}><Card description={transaction.description} value={transaction.value} type={transaction.type} maskedValue={transaction.maskedValue} removeItem={removeItem}/></li>) : <div className="noCard"><h2 className="noCard--message">Você ainda não possui nenhum lançamento</h2> <figure><img src={NoCard} alt="NoCard images" /> <figcaption>No card found</figcaption></figure></div>}
+                currentList.map(transaction => <li key={`${transaction.description} ${transaction.type}`}><Card description={transaction.description} value={transaction.value} type={transaction.type} maskedValue={transaction.maskedValue} removeItem={removeItem}/></li>) : <div className="noCard"><h2 className="noCard--message">Você ainda não possui nenhum lançamento</h2> <figure><img src={NoCard} alt="NoCard images" className="noCard--img"/> <figcaption>No card found</figcaption></figure></div>}
             </ul>
         </div>
     )

@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 30px;
     width: 560px;
+    margin-bottom: 30px;
 }
 
 ul.filters {
@@ -60,4 +61,37 @@ ul.filters {
     display: flex;
     flex-direction: column;
     gap: 32px;
+}
+
+@media screen and (max-width:600px){
+    .list--container{
+        width: 300px;
+    }
+
+    ul.filters{
+        width:300px;
+        gap: 5px;
+    }
+
+    .noCard--message{
+        font-size: 18px;
+    }
+
+    .abstract{
+        margin: 0;
+    }
+
+    .abstract h3{
+        font-size:16px;
+    }
+
+    .btn--filters{
+        width: 55px;
+        height: 30px;
+        font-size:10px;
+    }
+
+    .noCard--img{
+        width: 300px;
+    }
 }

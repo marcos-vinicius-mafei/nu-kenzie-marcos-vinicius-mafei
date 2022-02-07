@@ -27,3 +27,10 @@
 .btn--alert:hover{
     cursor: pointer;
 }
+
+@media screen and (max-width:600px){
+    .alert--card{
+        width: 300px;
+        left: 10px;
+    }
+}

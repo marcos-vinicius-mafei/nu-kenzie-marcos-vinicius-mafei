@@ -6,7 +6,7 @@ const Form = ({changeValue,changeDescription,changeType,addItem}) => {
             <form onSubmit={addItem}>
                 <div className="container--inputDesc">
                     <label htmlFor="description">Descrição</label>
-                    <input type="text" name="description" className="form--description" placeholder="Digite aqui sua descrição" onChange={changeDescription}/>
+                    <input type="text" name="description" className="form--description" placeholder="Digite aqui sua descrição" onChange={changeDescription} maxLength="40"/>
                     <span>Ex: Compra de roupas</span>
                 </div>
                 <div className="line--container">

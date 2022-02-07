@@ -11,3 +11,17 @@
     flex-direction: column;
     gap: 22px;
 }
+
+@media screen and (max-width:1000px){
+    .main--home{
+        width:600px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:600px){
+    .main--home{
+        width:300px;
+    }
+}
