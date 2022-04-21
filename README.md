@@ -1,6 +1,7 @@
 <h1 align="center">NuKenzie</h1>
 
-##Project made usigin React.Js
+<h2>Project made usigin React.Js</h2>
 
-##Visit the Website
-Project URL=> https://nu-kenzie-marcos-mafei.vercel.app/
+<h2>Visit the Website</h2>
+
+<h3>Project URL=> https://nu-kenzie-marcos-mafei.vercel.app/</h3>
